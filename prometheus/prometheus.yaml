@@ -1,8 +1,9 @@
 scrape_configs:
   - job_name: "spring-boot-application"
+    scheme: https
     metrics_path: "/actuator/prometheus"
-    scrape_interval: 5s
+    scrape_interval: 10s
     static_configs:
-      - targets: ["host.docker.internal:8080"]
+      - targets: ["mateusnavarro77.xyz"]
         labels:
           application: "Projeto Cybersec - Task Manager Rest API (Producao)"
